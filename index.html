@@ -4,21 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
 body, html {
     height: 100%;
-    font-family: "Inconsolata", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 .bgimg {
     background-position: center;
     background-size: cover;
-    background-image: url("/w3images/coffeehouse.jpg");
+    /* background-image: url("/w3images/coffeehouse.jpg"); */
     background-color: #888;
-    min-height: 75%;
+    min-height: 40%;
 }
 .menu {
     display: none;
+}
+.atcharhere:before {
+    content: '@';
+}
+dt {
+    font-weight: bold;
+}
+pre {
+    font-family: "Inconsolata", monospace;
 }
 </style>
 <body>
@@ -26,17 +36,26 @@ body, html {
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3">
+    <div class="w3-col s1">
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    <div class="w3-col s2">
+      <a href="#register" class="w3-button w3-block w3-black">REGISTER</a>
     </div>
-    <div class="w3-col s3">
-      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    <div class="w3-col s2">
+      <a href="#motiv" class="w3-button w3-block w3-black">MOTIVATION</a>
     </div>
-    <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    <div class="w3-col s2">
+      <a href="#task" class="w3-button w3-block w3-black">TASK</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
+    </div>
+    <div class="w3-col s1">
+      <a href="#refs" class="w3-button w3-block w3-black">REFERENCES</a>
     </div>
   </div>
 </div>
@@ -47,7 +66,7 @@ body, html {
     <span class="w3-tag">Data Release: 27 March 2017</span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">E2E<br>NLG Challenge</span>
+    <h1 class="w3-text-white" style="font-size:90px">E2E<br>NLG Challenge</h1>
   </div>
   <div class="w3-display-bottomright w3-center w3-padding-xlarge">
     <span class="w3-text-white">Entry Submission Deadline: 31 October 2017</span>
@@ -57,93 +76,197 @@ body, html {
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-grayscale w3-large">
 
-<!-- About Container -->
-<div class="w3-container" id="about">
+
+
+<!-- 
+***
+Start main content 
+***
+-->
+
+<!-- Register -->
+
+<div class="w3-container" id="register">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">ABOUT THE CAFE</span></h5>
-    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Register Interest
+</span></h2>
+<p>
+Please <a href="https://goo.gl/forms/DAj41Pl6IevZSTWl1">register here</a> if you would like to receive a link to the full data set (50k instances).
+</p>
   </div>
 </div>
 
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
+<div class="w3-container" id="motiv">
   <div class="w3-content" style="max-width:700px">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">THE MENU</span></h5>
-  
-    <div class="w3-row w3-center w3-card-2 w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">Eat</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">Drink</div>
-      </a>
-    </div>
 
-    <div id="Eat" class="w3-container menu w3-padding-48 w3-card-2">
-      <h5>Bread Basket</h5>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-    
-      <h5>Honey Almond Granola with Fruits</h5>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h5>Belgian Waffle</h5>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h5>Scrambled eggs</h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h5>Blueberry Pancakes</h5>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-    </div>
 
-    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card-2">
-      <h5>Coffee</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
-    
-      <h5>Chocolato</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-    
-      <h5>Corretto</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-    
-      <h5>Iced tea</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-    
-      <h5>Soda</h5>
-      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-    </div>  
-    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+<!-- Motivation -->
+
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Motivation
+</span></h2>
+
+<p>
+Natural language generation plays a critical role for Conversational Agents as it has a significant impact on a user’s impression of the system. This shared task focuses on recent end-to-end (E2E), data-driven NLG methods, which jointly learn sentence planning and surface realisation from non-aligned data, e.g. (<a href="#cit_wen15">Wen et al., 2015</a>; <a href="#cit_mei16">Mei et al., 2016</a>; <a href="#cit_dusek16">Dušek and Jurčíček, 2016</a>; <a href="#cit_lampouras16">Lampouras and Vlachos, 2016</a>) etc.
+</p>
+<p>
+So far, E2E NLG approaches were limited to small, de-lexicalised data sets, e.g. BAGEL, SF Hotels/ Restaurants, or RoboCup. In this shared challenge, we will provide a new crowd-sourced data set of 50k instances in the restaurant domain, as described in (<a href="#cit_novikova16">Novikova, Lemon and Rieser, 2016</a>). Each instance consist of a dialogue act-based meaning representation (MR) and up to 5 references in natural language. In contrast to previously used data, our data set includes additional challenges, such as open vocabulary, complex syntactic structures and diverse discourse phenomena. For example:
+</p>
+<div class="w3-panel w3-leftbar w3-light-grey">
+<p><strong>MR:</strong></p>
+<pre>
+name[The Eagle],
+eatType[coffee shop],
+food[French],
+priceRange[moderate],
+customerRating[3/5],
+area[riverside],
+kidsFriendly[yes],
+near[Burger King]
+</pre>
+
+<p><strong>NL:</strong></p>
+<p><i>
+“The three star coffee shop, The Eagle, gives families a mid-priced dining experience featuring a variety of wines and cheeses. Find The Eagle near Burger King.”
+</i></p>
+</div>
+
+<p>
+The full data set will be released to participants according to the timeline below. A sample of the data <a href="https://github.com/jeknov/INLG_16_submission">can be obtained here</a>. 
+</p>
+<p>
+This challenge follows on from previous successful shared tasks on generation, e.g. SemEval’17 task 9 on text generation from AMR, and generation challenges 2008-11 organised by Anja Belz.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
+</p>
+    <!--<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">-->
   </div>
 </div>
 
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
+
+<!-- The task -->
+
+<div class="w3-container" id="task">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">WHERE TO FIND US</span></h5>
-    <p>Find us at some address at some place.</p>
-    <div id="googleMap" class="w3-sepia" style="width:100%;height:400px;"></div>
-    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-    </form>
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Proposed Task
+</span></h2>
+The task is to generate an utterance from a given MR, which is a) similar to human generated reference texts, and b) highly rated by humans. Similarity will be assessed using standard metrics, such as BLEU and METEOR. Human ratings will be obtained using a mixture of crowd-sourcing and expert annotations. We will also test a suite of novel metrics to estimate the quality of a generated utterance.
   </div>
 </div>
 
-<!-- End page content -->
+
+<!-- The task -->
+
+<div class="w3-container" id="dates">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Important Dates
+</span></h2>
+<dl>
+<dt> 9 March 2017:</dt><dd> Registration opens</dd>
+<dt> 27 March 2017:</dt><dd> Training and development data are released (MRs + references)</dd>
+<dt> May 2017:</dt><dd> Baseline is released.</dd>
+<dt> 16 October 2017:</dt><dd> Test data is released (MRs only)</dd>
+<dt> 31 October 2017:</dt><dd> Entry submission deadline</dd>
+<dt> 15 Nov  2017:</dt><dd> Evaluation results are released</dd>
+<dt> 15 December 2017:</dt><dd> Participants submit a paper describing their systems</dd>
+<dt> February 2018:</dt><dd> Results presented at workshop </dd>
+</dl>
+  </div>
+</div>
+
+<!-- Contacts -->
+
+<div class="w3-container" id="contacts">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Contacts
+</span></h2>
+
+<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Organising Comittee
+</span></h4>
+<p>
+Jekaterina Novikova<br/>
+Ondrej Dusek<br/>
+Verena Rieser
+</p>
+
+<p>
+Heriot-Watt University, Edinburgh, UK.
+</p>
+
+<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Contact Details
+</span></h4>
+
+<p>
+<strong>e2e-nlg-challenge<span class="atcharhere">googlegroups</span>.com</strong>
+</p>
+
+<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Advisory Committee
+</span></h4>
+
+<p>
+Amanda Stent, Bloomberg <br/>
+Marilyn Walker, University of California Santa Cruz <br/>
+Matthew Walter, Toyota Technological Institute at Chicago <br/>
+Tsung-Hsien Wen, University of Cambridge <br/>
+Luke Zettlemoyer, University of Washington<br/>
+</p>
+
+  </div>
+</div>
+
+
+<!-- References -->
+
+<div class="w3-container" id="refs" style="padding-bottom: 32px">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+References
+</span></h2>
+
+<p id="cit_dusek16">
+Ondřej Dušek and Filip Jurčíček (2016): 
+<a href="http://www.aclweb.org/anthology/P16-2008">Sequence-to-Sequence Generation for Spoken Dialogue via Deep Syntax Trees and Strings</a>.
+<em>Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</em>, Berlin, Germany.
+</p>
+
+<p id="cit_mei16">
+Hongyuan Mei, Mohit Bansal, and Matthew R. Walter (2016):
+<a href="http://www.aclweb.org/anthology/N16-1086">What to Talk about and How? Selective Generation Using LSTMs with Coarse-to-Fine Alignment.</a>
+<em>Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</em>, San Diego, CA, USA.
+</p>
+
+<p id="cit_lampouras16">
+Gerasimos Lampouras and Andreas Vlachos (2016): 
+<a href="https://aclweb.org/anthology/C16-1105">Imitation Learning for Language Generation from Unaligned Data</a>.
+<em>Proceedings of the 26th International Conference on Computational Linguistics</em>, Osaka, Japan.
+</p>
+
+<p id="cit_novikova16">
+Jekaterina Novikova, Oliver Lemon, and Verena Rieser (2016): 
+<a href="http://aclweb.org/anthology/W16-6644">Crowd-sourcing NLG Data: Pictures Elicit Better Data</a>.
+<em>Proceedings of the 9th International Natural Language Generation conference</em>, Edinburgh, Scotland, UK.
+</p>
+
+<p id="cit_wen15">
+Tsung-Hsien Wen, Milica Gasic, Nikola Mrkšić, Pei-Hao Su, David Vandyke, and Steve Young (2015): 
+<a href="http://aclweb.org/anthology/D15-1199">Semantically Conditioned LSTM-Based Natural Language Generation for Spoken Dialogue Systems</a>.
+<em>Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</em>, Lisbon, Portugal.
+</p>
+  </div>
+</div>
+
+
+<!-- 
+***
+End page content 
+***
+-->
+
 </div>
 
 <!-- Footer -->
@@ -151,45 +274,6 @@ body, html {
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 </body>
 </html>
