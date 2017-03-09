@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>E2E NLG Challenge</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -14,7 +14,7 @@ body, html {
 .bgimg {
     background-position: center;
     background-size: cover;
-    /* background-image: url("/w3images/coffeehouse.jpg"); */
+    background-image: url("backgr.jpg");
     background-color: #888;
     min-height: 40%;
 }
@@ -23,6 +23,13 @@ body, html {
 }
 .atcharhere:before {
     content: '@';
+}
+
+#main-title {
+    font-size: 90px; 
+    padding-top: 1em; 
+    padding-bottom: 30px;
+    line-height: 1;
 }
 dt {
     font-weight: bold;
@@ -40,13 +47,13 @@ pre {
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
     <div class="w3-col s2">
-      <a href="#register" class="w3-button w3-block w3-black">REGISTER</a>
-    </div>
-    <div class="w3-col s2">
       <a href="#motiv" class="w3-button w3-block w3-black">MOTIVATION</a>
     </div>
     <div class="w3-col s2">
       <a href="#task" class="w3-button w3-block w3-black">TASK</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#register" class="w3-button w3-block w3-black">REGISTER</a>
     </div>
     <div class="w3-col s2">
       <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
@@ -65,8 +72,8 @@ pre {
   <div class="w3-display-bottomleft w3-center w3-padding-xlarge w3-hide-small">
     <span class="w3-tag">Data Release: 27 March 2017</span>
   </div>
-  <div class="w3-display-middle w3-center">
-    <h1 class="w3-text-white" style="font-size:90px">E2E<br>NLG Challenge</h1>
+  <div class="w3-center">
+    <h1 class="w3-text-white" id="main-title">E2E<br>NLG Challenge</h1>
   </div>
   <div class="w3-display-bottomright w3-center w3-padding-xlarge">
     <span class="w3-text-white">Entry Submission Deadline: 31 October 2017</span>
@@ -84,24 +91,10 @@ Start main content
 ***
 -->
 
-<!-- Register -->
-
-<div class="w3-container" id="register">
-  <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
-Register Interest
-</span></h2>
-<p>
-Please <a href="https://goo.gl/forms/DAj41Pl6IevZSTWl1">register here</a> if you would like to receive a link to the full data set (50k instances).
-</p>
-  </div>
-</div>
+<!-- Motivation -->
 
 <div class="w3-container" id="motiv">
   <div class="w3-content" style="max-width:700px">
-
-
-<!-- Motivation -->
 
 <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
 Motivation
@@ -174,6 +167,21 @@ Important Dates
 </dl>
   </div>
 </div>
+
+
+<!-- Register -->
+
+<div class="w3-container" id="register">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+Register Interest
+</span></h2>
+<p>
+Please <a href="https://goo.gl/forms/DAj41Pl6IevZSTWl1">register here</a> if you would like to receive a link to the full data set (50k instances).
+</p>
+  </div>
+</div>
+
 
 <!-- Contacts -->
 
