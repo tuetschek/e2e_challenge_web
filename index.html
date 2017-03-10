@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
 body, html {
@@ -37,32 +38,35 @@ dt {
 pre {
     font-family: "Inconsolata", monospace;
 }
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: "Open Sans", sans-serif;
+}
+h4 {
+    font-weight: bold;
+}
 </style>
 <body>
 
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s1">
+    <div class="w3-col s4 m3 l2">
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
-    <div class="w3-col s2">
+    <div class="w3-col s4 m3 l2">
       <a href="#motiv" class="w3-button w3-block w3-black">MOTIVATION</a>
     </div>
-    <div class="w3-col s2">
+    <div class="w3-col s4 m3 l2">
       <a href="#task" class="w3-button w3-block w3-black">TASK</a>
     </div>
-    <div class="w3-col s2">
+    <div class="w3-col s4 m3 l2">
       <a href="#register" class="w3-button w3-block w3-black">REGISTER</a>
     </div>
-    <div class="w3-col s2">
+    <div class="w3-col s4 m3 l2">
       <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
     </div>
-    <div class="w3-col s2">
+    <div class="w3-col s4 m3 l2">
       <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
-    </div>
-    <div class="w3-col s1">
-      <a href="#refs" class="w3-button w3-block w3-black">REFERENCES</a>
     </div>
   </div>
 </div>
@@ -96,15 +100,15 @@ Start main content
 <div class="w3-container" id="motiv">
   <div class="w3-content" style="max-width:700px">
 
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
 Motivation
 </span></h2>
 
 <p>
-Natural language generation plays a critical role for Conversational Agents as it has a significant impact on a user’s impression of the system. This shared task focuses on recent end-to-end (E2E), data-driven NLG methods, which jointly learn sentence planning and surface realisation from non-aligned data, e.g. (<a href="#cit_wen15">Wen et al., 2015</a>; <a href="#cit_mei16">Mei et al., 2016</a>; <a href="#cit_dusek16">Dušek and Jurčíček, 2016</a>; <a href="#cit_lampouras16">Lampouras and Vlachos, 2016</a>) etc.
+Natural language generation plays a critical role for Conversational Agents as it has a significant impact on a user’s impression of the system. This shared task focuses on recent end-to-end (E2E), data-driven NLG methods, which jointly learn sentence planning and surface realisation from non-aligned data, e.g. (<a href="http://aclweb.org/anthology/D15-1199">Wen et al., 2015</a>; <a href="http://www.aclweb.org/anthology/N16-1086">Mei et al., 2016</a>; <a href="http://www.aclweb.org/anthology/P16-2008">Dušek and Jurčíček, 2016</a>; <a href="https://aclweb.org/anthology/C16-1105">Lampouras and Vlachos, 2016</a>) etc.
 </p>
 <p>
-So far, E2E NLG approaches were limited to small, de-lexicalised data sets, e.g. BAGEL, SF Hotels/ Restaurants, or RoboCup. In this shared challenge, we will provide a new crowd-sourced data set of 50k instances in the restaurant domain, as described in (<a href="#cit_novikova16">Novikova, Lemon and Rieser, 2016</a>). Each instance consist of a dialogue act-based meaning representation (MR) and up to 5 references in natural language. In contrast to previously used data, our data set includes additional challenges, such as open vocabulary, complex syntactic structures and diverse discourse phenomena. For example:
+So far, E2E NLG approaches were limited to small, de-lexicalised data sets, e.g. BAGEL, SF Hotels/ Restaurants, or RoboCup. In this shared challenge, we will provide a new crowd-sourced data set of 50k instances in the restaurant domain, as described in (<a href="http://aclweb.org/anthology/W16-6644">Novikova, Lemon and Rieser, 2016</a>). Each instance consist of a dialogue act-based meaning representation (MR) and up to 5 references in natural language. In contrast to previously used data, our data set includes additional challenges, such as open vocabulary, complex syntactic structures and diverse discourse phenomena. For example:
 </p>
 <div class="w3-panel w3-leftbar w3-light-grey">
 <p><strong>MR:</strong></p>
@@ -129,7 +133,7 @@ near[Burger King]
 The full data set will be released to participants according to the timeline below. A sample of the data <a href="https://github.com/jeknov/INLG_16_submission">can be obtained here</a>. 
 </p>
 <p>
-This challenge follows on from previous successful shared tasks on generation, e.g. SemEval’17 task 9 on text generation from AMR, and generation challenges 2008-11 organised by Anja Belz.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
+This challenge follows on from previous successful shared tasks on generation, e.g. <a href="http://alt.qcri.org/semeval2017/task9/">SemEval’17 task 9</a> on text generation from AMR, and <a href="http://www.nltg.brighton.ac.uk/research/genchal11/">generation challenges 2008-11</a> organised by Anja Belz.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
 </p>
     <!--<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">-->
   </div>
@@ -140,7 +144,7 @@ This challenge follows on from previous successful shared tasks on generation, e
 
 <div class="w3-container" id="task">
   <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
 Proposed Task
 </span></h2>
 The task is to generate an utterance from a given MR, which is a) similar to human generated reference texts, and b) highly rated by humans. Similarity will be assessed using standard metrics, such as BLEU and METEOR. Human ratings will be obtained using a mixture of crowd-sourcing and expert annotations. We will also test a suite of novel metrics to estimate the quality of a generated utterance.
@@ -148,11 +152,11 @@ The task is to generate an utterance from a given MR, which is a) similar to hum
 </div>
 
 
-<!-- The task -->
+<!-- The dates -->
 
 <div class="w3-container" id="dates">
   <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
 Important Dates
 </span></h2>
 <dl>
@@ -173,7 +177,7 @@ Important Dates
 
 <div class="w3-container" id="register">
   <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
 Register Interest
 </span></h2>
 <p>
@@ -185,13 +189,13 @@ Please <a href="https://goo.gl/forms/DAj41Pl6IevZSTWl1">register here</a> if you
 
 <!-- Contacts -->
 
-<div class="w3-container" id="contacts">
+<div class="w3-container" id="contacts" style="padding-bottom: 32px;">
   <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
 Contacts
 </span></h2>
 
-<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h4 class="w3-center"><span class="w3-padding-left w3-padding-right">
 Organising Comittee
 </span></h4>
 <p>
@@ -204,7 +208,7 @@ Verena Rieser
 Heriot-Watt University, Edinburgh, UK.
 </p>
 
-<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h4 class="w3-center"><span class="w3-padding-left w3-padding-right">
 Contact Details
 </span></h4>
 
@@ -212,59 +216,19 @@ Contact Details
 <strong>e2e-nlg-challenge<span class="atcharhere">googlegroups</span>.com</strong>
 </p>
 
-<h4 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
+<h4 class="w3-center"><span class="w3-padding-left w3-padding-right">
 Advisory Committee
 </span></h4>
 
 <p>
 Amanda Stent, Bloomberg <br/>
+Andreas Vlachos, University of Sheffield <br/>
 Marilyn Walker, University of California Santa Cruz <br/>
 Matthew Walter, Toyota Technological Institute at Chicago <br/>
 Tsung-Hsien Wen, University of Cambridge <br/>
 Luke Zettlemoyer, University of Washington<br/>
 </p>
 
-  </div>
-</div>
-
-
-<!-- References -->
-
-<div class="w3-container" id="refs" style="padding-bottom: 32px">
-  <div class="w3-content" style="max-width:700px">
-<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">
-References
-</span></h2>
-
-<p id="cit_dusek16">
-Ondřej Dušek and Filip Jurčíček (2016): 
-<a href="http://www.aclweb.org/anthology/P16-2008">Sequence-to-Sequence Generation for Spoken Dialogue via Deep Syntax Trees and Strings</a>.
-<em>Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</em>, Berlin, Germany.
-</p>
-
-<p id="cit_mei16">
-Hongyuan Mei, Mohit Bansal, and Matthew R. Walter (2016):
-<a href="http://www.aclweb.org/anthology/N16-1086">What to Talk about and How? Selective Generation Using LSTMs with Coarse-to-Fine Alignment.</a>
-<em>Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</em>, San Diego, CA, USA.
-</p>
-
-<p id="cit_lampouras16">
-Gerasimos Lampouras and Andreas Vlachos (2016): 
-<a href="https://aclweb.org/anthology/C16-1105">Imitation Learning for Language Generation from Unaligned Data</a>.
-<em>Proceedings of the 26th International Conference on Computational Linguistics</em>, Osaka, Japan.
-</p>
-
-<p id="cit_novikova16">
-Jekaterina Novikova, Oliver Lemon, and Verena Rieser (2016): 
-<a href="http://aclweb.org/anthology/W16-6644">Crowd-sourcing NLG Data: Pictures Elicit Better Data</a>.
-<em>Proceedings of the 9th International Natural Language Generation conference</em>, Edinburgh, Scotland, UK.
-</p>
-
-<p id="cit_wen15">
-Tsung-Hsien Wen, Milica Gasic, Nikola Mrkšić, Pei-Hao Su, David Vandyke, and Steve Young (2015): 
-<a href="http://aclweb.org/anthology/D15-1199">Semantically Conditioned LSTM-Based Natural Language Generation for Spoken Dialogue Systems</a>.
-<em>Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</em>, Lisbon, Portugal.
-</p>
   </div>
 </div>
 
