@@ -50,7 +50,7 @@ h4 {
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s4 m3 l2">
+    <div class="w3-col s4 m3 l1">
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
     <div class="w3-col s4 m3 l2">
@@ -63,9 +63,12 @@ h4 {
       <a href="#register" class="w3-button w3-block w3-black">DATA</a>
     </div>
     <div class="w3-col s4 m3 l2">
-      <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
+      <a href="#register" class="w3-button w3-block w3-black">BASELINE</a>
     </div>
     <div class="w3-col s4 m3 l2">
+      <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
+    </div>
+    <div class="w3-col s4 m3 l1">
       <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
     </div>
   </div>
@@ -135,7 +138,6 @@ The full data set can be obtained by registering <a href="#register">below</a>. 
 <p>
 This challenge follows on from previous successful shared tasks on generation, e.g. <a href="http://alt.qcri.org/semeval2017/task9/">SemEval’17 task 9</a> on text generation from AMR, and <a href="http://www.nltg.brighton.ac.uk/research/genchal11/">Generation Challenges 2008-11</a>.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
 </p>
-    <!--<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">-->
   </div>
 </div>
 
@@ -152,7 +154,7 @@ The task is to generate an utterance from a given MR, which is a) similar to hum
 </div>
 
 
-<!-- Register -->
+<!-- Register / download data -->
 
 <div class="w3-container" id="register">
   <div class="w3-content" style="max-width:700px">
@@ -178,6 +180,30 @@ To cite the dataset and/or challenge, use:
   note={To appear.},
 }
 </pre>
+  </div>
+</div>
+
+<!-- Baseline -->
+
+<div class="w3-container" id="register">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
+Baseline System
+</span></h2>
+<p>
+We used <a href="https://github.com/UFAL-DSG/tgen">TGen</a> (<a href="http://aclweb.org/anthology/P16-2008">Dusek and Jurcicek, 2016</a>) as the baseline system for the challenge. It is a seq2seq model with attention (<a href="https://arxiv.org/abs/1409.0473">Bahdanau et al., 2015</a>) with added beam search and a reranker penalizing outputs that stray away from the input MR. The baseline scores on the development set are as follows:
+</p>
+<div class="w3-panel w3-leftbar w3-light-grey">
+<table style="width: 30%; text-align: left;">
+    <tr><th>Metric</th><th>Score</th></tr>
+    <tr><td>BLEU</td><td>0.6925</td></tr>
+    <tr><td>NIST</td><td>8.4781</td></tr>
+    <tr><td>METEOR</td><td>0.4703</td></tr>
+    <tr><td>ROUGE-L</td><td>0.7257</td></tr>
+    <tr><td>CIDEr</td><td>2.3985</td></tr>
+</table>
+</div>
+The full baseline system outputs for the development set can be downloaded <a href="data/baseline-output.txt">here</a> (one instance per line).
   </div>
 </div>
 
