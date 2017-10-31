@@ -25,6 +25,9 @@ body, html {
 .atcharhere:before {
     content: '@';
 }
+.w3-col.s4.m3.l2{
+  width: 13%;
+}
 
 #main-title {
     font-size: 90px;
@@ -67,6 +70,9 @@ h4 {
     </div>
     <div class="w3-col s4 m3 l2">
       <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
+    </div>
+    <div class="w3-col s4 m3 l2">
+      <a href="#submission" class="w3-button w3-block w3-black">SUBMISSION</a>
     </div>
     <div class="w3-col s4 m3 l1">
       <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
@@ -165,14 +171,17 @@ The metrics used for automatic evaluation are available <a href="https://github.
 <div class="w3-container" id="register">
   <div class="w3-content" style="max-width:700px">
 <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
-Download Training Data
+Download Training and Test Data
 </span></h2>
 <p>
 Please <a href="https://goo.gl/forms/fov1KOX0GdgOK4Np2">register here</a> to download the training and development data.
 </p>
 <p>
+The test set is available <a href="http://www.macs.hw.ac.uk/interactionlab/E2E/data/test.zip">here</a>.
+</p>
+<p>
 The description of the data is available <a href="http://www.macs.hw.ac.uk/InteractionLab/E2E/data/Readme.txt">here</a>.
-A paper with a detailed description of the dataset will appear on SIGDIAL and is now available <a href="https://arxiv.org/abs/1706.09254">on arXiv</a>.
+A paper with a detailed description of the dataset appeared on SIGDIAL 2017 and is also available <a href="https://arxiv.org/abs/1706.09254">on arXiv</a>.
 </p>
 <p>
 To cite the dataset and/or challenge, use:
@@ -239,6 +248,44 @@ Important Dates
 <dt> 15 December 2017:</dt><dd> Participants submit a paper describing their systems</dd>
 <dt> February 2018:</dt><dd> Results presented at workshop </dd>
 </dl>
+  </div>
+</div>
+
+<!-- Submission -->
+
+<div class="w3-container" id="submission">
+  <div class="w3-content" style="max-width:700px">
+<h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
+Submission
+</span></h2>
+
+<dl>
+<dt>* What does the test set look like?</dt>
+<dd>It is very similar to the development set (e.g. no unknown attributes, values or restaurant names) but the combination of attributes is unique/ previously unseen. </dd>
+
+<dt>* How do I submit my system?</dt>
+<dd>Please send your system outputs to <strong>e2e-nlg-challenge<span class="atcharhere">googlegroups</span>.com</strong> as a *.tsv file. The file must consist of paired MR and system output, each pair on a new line. </dd>
+
+<dt>* How many systems can I submit?</dt>
+<dd>You can submit up to 10 entries per team and you must specify a maximum of 1 or 2 primary systems. If you choose to submit more than one primary system, you need to make sure that these are sufficiently different in terms of model architecture and justify separate papers/ system descriptions (one paper per primary system).</dd>
+
+<dt>* How will you evaluate my system?</dt>
+<dd>All submissions will be automatically evaluated using the previously distributed evaluation script. Primary systems will be evaluated using crowdsourcing (following good practises from the well-established Machine Translation Shared Tasks).</dd>
+
+<dt>* How do I submit my paper?</dt>
+<dd>Papers will be submitted via email. Please use the NAACL 2018 style and format guidelines: <a href="http://naacl2018.org/call_for_paper.html">http://naacl2018.org/call_for_paper.html</a>.
+Please note that papers won't be peer-reviewed on this occasion, as such, it is not necessary to anonymise your paper.
+Papers should be max 8 pages of content. </dd>
+
+<dt>* Will my paper be published?</dt>
+<dd>At this point system descriptions will be published on our website, alongside the evaluation results. Please note that submissions to the challenge are considered non-archival and do not count as duplicate submission wrt conference paper submissions.
+We will, however, give you the chance to present your work as part of a special session at INLG 2018.</dd>
+
+<dt>* What if my system does badly?</dt>
+<dd>In accordance with ethical considerations of NLP shared tasks (Parra Escartın et al. 2017), we allow researchers to publish results anonymously if their system performs in the lower 50% of submissions.</dd>
+
+</dl>
+
   </div>
 </div>
 
