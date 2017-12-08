@@ -399,57 +399,32 @@ The table is sortable – just click on the metric you want use for sorting. Cli
 </p>
 <h3>Human Evaluation</h3>
 <p>
-The human evaluation was conducted on the 19 primary systems and the baseline using the CrowdFlower platform. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>naturalness</em> and <em>quality</em>.
-</p>
-<p>
-<em>Naturalness</em> is defined the extent to which the utterance could have been produced by a native speaker. When collecting naturalness ratings, system outputs were presented to crowd workers without the corresponding meaning representation.
+The human evaluation was conducted on the 19 primary systems and the baseline using the CrowdFlower platform. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>quality</em> and <em>naturalness</em>.
 </p>
 <p>
 <em>Quality</em> is defined as an overall quality of the utterance, in terms of its grammatical correctness, fluency, adequacy and other important factors. When collecting quality ratings, system outputs were presented to crowd workers together with the corresponding meaning representation.
 </p>
 <p>
+<em>Naturalness</em> is defined the extent to which the utterance could have been produced by a native speaker. When collecting naturalness ratings, system outputs were presented to crowd workers without the corresponding meaning representation.
+</p>
+<p>
+If used in a real-life NLG system, <em>quality</em> would be considered the primary measure.
+</p>
+<p>
 The final evaluation results were produced using the TrueSkill algorithm (<a href="http://www.aclweb.org/anthology/W14-3301">Sakaguchi et al., 2014</a>). For naturalness, the algorithm performed 1890 pairwise comparisons per each system (37800 comparisons in total), for quality – 1260 comparisons per system (25200 comparisons in total). In results tables, systems are ordered by their inferred system TrueSkill scores, and clustered. Systems within a cluster are considered tied. The system clusters have been created using bootstrap resampling, with a p-level of p ≤ 0.05.
 </p>
-<h4>Naturalness</h4>
-<table class="w3-small w3-table w3-striped w3-border">
-<thead class="w3-black">
-<tr><th>#</th><th>TrueSkill</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
-</thead>
-<tbody>
-<tr class="w3-border-bottom"><td>1</td><td>0.231</td><td>(1-1)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem2_var1</td></tr>
-<tr><td rowspan="10">2</td><td>0.192</td><td>(2-3)</td><td>Slug2Slug</td><td>slug2slug</td></tr>
-<tr><td>0.160</td><td>(2-4)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
-<tr><td>0.130</td><td>(4-6)</td><td>HarvardNLP &amp; Henry Elder</td><td>Primary_main_1</td></tr>
-<tr><td>0.121</td><td>(4-6)</td><td>Shubham Agarwal</td><td>submission_primary</td></tr>
-<tr><td>0.103</td><td>(5-7)</td><td>BASELINE</td><td>Baseline</td></tr>
-<tr><td>0.081</td><td>(6-9)</td><td>UIT-DANGNT</td><td>test_e2e_result_2 final_TSV</td></tr>
-<tr><td>0.066</td><td>(7-9)</td><td>TNT-NLG</td><td>System 2/Primary-Sys2</td></tr>
-<tr><td>0.054</td><td>(7-11)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
-<tr><td>0.028</td><td>(9-11)</td><td>TNT-NLG</td><td>System 1/Primary-Sys1</td></tr>
-<tr class="w3-border-bottom"><td>0.024</td><td>(9-11)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
-<tr><td rowspan="5">3</td><td>-0.046</td><td>(12-15)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
-<tr><td>-0.051</td><td>(12-15)</td><td>Thomson Reuters NLG</td><td>Primary_1_submission_6_beam</td></tr>
-<tr><td>-0.078</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_2</td></tr>
-<tr><td>-0.081</td><td>(13-16)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
-<tr class="w3-border-bottom"><td>-0.083</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_1</td></tr>
-<tr><td rowspan="2">4</td><td>-0.144</td><td>(17-18)</td><td>FORGe</td><td>E2E_UPF_1</td></tr>
-<tr class="w3-border-bottom"><td>-0.181</td><td>(17-18)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
-<tr><td rowspan="2">5</td><td>-0.262</td><td>(19-20)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
-<tr><td>-0.263</td><td>(19-20)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
-</tbody>
-</table>
 
 <h4>Quality</h4>
 <table class="w3-small w3-table w3-striped w3-border">
 <thead class="w3-black">
-<tr><th>#</th><th>Score</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
+<tr><th>#</th><th>TrueSkill</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
 </thead>
 <tbody>
 <tr class="w3-border-bottom"><td>1</td><td>0.307</td><td>(1-1)</td><td>Slug2Slug</td><td>slug2slug</td></tr>
 <tr><td rowspan="14">2</td><td>0.228</td><td>(2-4)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
 <tr><td>0.209</td><td>(2-5)</td><td>BASELINE</td><td>Baseline</td></tr>
 <tr><td>0.201</td><td>(2-5)</td><td>UIT-DANGNT</td><td>test_e2e_result_2 final_TSV</td></tr>
-<tr><td>0.170</td><td>(3-6)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
+<tr class="late"><td>0.170</td><td>(3-6)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
 <tr><td>0.145</td><td>(4-7)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_2</td></tr>
 <tr><td>0.102</td><td>(6-9)</td><td>TNT-NLG</td><td>System 1/Primary-Sys1</td></tr>
 <tr><td>0.079</td><td>(7-10)</td><td>TNT-NLG</td><td>System 2/Primary-Sys2</td></tr>
@@ -467,6 +442,36 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr><td>-0.470</td><td>(19-20)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem2_var1</td></tr>
 </tbody>
 </table>
+
+<h4>Naturalness</h4>
+<table class="w3-small w3-table w3-striped w3-border">
+<thead class="w3-black">
+<tr><th>#</th><th>TrueSkill</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
+</thead>
+<tbody>
+<tr class="w3-border-bottom"><td>1</td><td>0.231</td><td>(1-1)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem2_var1</td></tr>
+<tr><td rowspan="10">2</td><td>0.192</td><td>(2-3)</td><td>Slug2Slug</td><td>slug2slug</td></tr>
+<tr><td>0.160</td><td>(2-4)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
+<tr><td>0.130</td><td>(4-6)</td><td>HarvardNLP &amp; Henry Elder</td><td>Primary_main_1</td></tr>
+<tr><td>0.121</td><td>(4-6)</td><td>Shubham Agarwal</td><td>submission_primary</td></tr>
+<tr><td>0.103</td><td>(5-7)</td><td>BASELINE</td><td>Baseline</td></tr>
+<tr><td>0.081</td><td>(6-9)</td><td>UIT-DANGNT</td><td>test_e2e_result_2 final_TSV</td></tr>
+<tr><td>0.066</td><td>(7-9)</td><td>TNT-NLG</td><td>System 2/Primary-Sys2</td></tr>
+<tr><td>0.054</td><td>(7-11)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
+<tr><td>0.028</td><td>(9-11)</td><td>TNT-NLG</td><td>System 1/Primary-Sys1</td></tr>
+<tr class="w3-border-bottom"><td>0.024</td><td>(9-11)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
+<tr class="late"><td rowspan="5">3</td><td>-0.046</td><td>(12-15)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
+<tr><td>-0.051</td><td>(12-15)</td><td>Thomson Reuters NLG</td><td>Primary_1_submission_6_beam</td></tr>
+<tr><td>-0.078</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_2</td></tr>
+<tr><td>-0.081</td><td>(13-16)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
+<tr class="w3-border-bottom"><td>-0.083</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_1</td></tr>
+<tr><td rowspan="2">4</td><td>-0.144</td><td>(17-18)</td><td>FORGe</td><td>E2E_UPF_1</td></tr>
+<tr class="w3-border-bottom"><td>-0.181</td><td>(17-18)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
+<tr><td rowspan="2">5</td><td>-0.262</td><td>(19-20)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
+<tr><td>-0.263</td><td>(19-20)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
+</tbody>
+</table>
+
   </div>
   </div>
 </div>
