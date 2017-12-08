@@ -330,7 +330,7 @@ The automatic evaluation results were obtained using the <a href="https://github
 The table is sortable – just click on the metric you want use for sorting. Click again to reverse the sort.
 </p>
   </div>
-<table class="w3-small w3-table w3-striped w3-border sortable">
+<table class="w3-small w3-table w3-striped w3-border sortable w3-hoverable">
 <thead class="w3-black">
 <tr><th>Submitter</th><th>Affiliation</th><th>System name</th><th>P?</th><th>BLEU</th><th>NIST</th><th>METEOR</th><th>ROUGE_L</th><th>CIDEr</th></tr>
 </thead>
@@ -364,9 +364,9 @@ The table is sortable – just click on the metric you want use for sorting. Cli
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_1</td><td></td><td>0.6396</td><td>8.3111</td><td>0.4466</td><td>0.6620</td><td>2.2272</td></tr>
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_3</td><td></td><td>0.6395</td><td>8.3127</td><td>0.4457</td><td>0.6628</td><td>2.2442</td></tr>
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_4</td><td></td><td>0.6395</td><td>8.3127</td><td>0.4457</td><td>0.6628</td><td>2.2442</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>primary_submission-temperature_1.1</td><td>✓</td><td>0.5092</td><td>7.1954</td><td>0.4025</td><td>0.5872</td><td>1.5039</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission-temperature_0.9</td><td></td><td>0.5573</td><td>7.7013</td><td>0.4154</td><td>0.6130</td><td>1.8110</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission-temperature_1.0</td><td></td><td>0.5265</td><td>7.3991</td><td>0.4095</td><td>0.5992</td><td>1.6488</td></tr>
+<tr><td>Henry Elder &amp; Sebastian Gehrmann</td><td>Adapt</td><td>primary_submission-temperature_1.1</td><td>✓</td><td>0.5092</td><td>7.1954</td><td>0.4025</td><td>0.5872</td><td>1.5039</td></tr>
+<tr><td>Henry Elder &amp; Sebastian Gehrmann</td><td>Adapt</td><td>supporting_submission-temperature_0.9</td><td></td><td>0.5573</td><td>7.7013</td><td>0.4154</td><td>0.6130</td><td>1.8110</td></tr>
+<tr><td>Henry Elder &amp; Sebastian Gehrmann</td><td>Adapt</td><td>supporting_submission-temperature_1.0</td><td></td><td>0.5265</td><td>7.3991</td><td>0.4095</td><td>0.5992</td><td>1.6488</td></tr>
 <tr><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>&lt;anonymous&t;</td><td></td><td>0.2921</td><td>4.7690</td><td>0.2515</td><td>0.4361</td><td>0.6674</td></tr>
 <tr><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>✓</td><td>0.4723</td><td>6.1938</td><td>0.3170</td><td>0.5616</td><td>1.2127</td></tr>
 <tr><td>Shubham Agarwal</td><td>XRCE</td><td>submission_primary</td><td>✓</td><td>0.6534</td><td>8.5300</td><td>0.4435</td><td>0.6829</td><td>2.1539</td></tr>
@@ -415,7 +415,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 </p>
 
 <h4>Quality</h4>
-<table class="w3-small w3-table w3-striped w3-border">
+<table class="w3-small w3-table w3-striped w3-border w3-hoverable">
 <thead class="w3-black">
 <tr><th>#</th><th>TrueSkill</th><th>Range</th><th>Submitter</th><th>System name</th></tr>
 </thead>
@@ -435,7 +435,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr><td>-0.028</td><td>(12-14)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
 <tr><td>-0.060</td><td>(13-15)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
 <tr class="w3-border-bottom"><td>-0.083</td><td>(13-15)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
-<tr><td rowspan="3">3</td><td>-0.146</td><td>(16-17)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
+<tr><td rowspan="3">3</td><td>-0.146</td><td>(16-17)</td><td>Henry Elder &amp; Sebastian Gehrmann</td><td>primary_submission-temperature_1.1</td></tr>
 <tr><td>-0.169</td><td>(16-18)</td><td>Thomson Reuters NLG</td><td>Primary_1_submission_6_beam</td></tr>
 <tr class="w3-border-bottom"><td>-0.191</td><td>(16-18)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
 <tr><td rowspan="2">4</td><td>-0.427</td><td>(19-20)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
@@ -444,7 +444,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 </table>
 
 <h4>Naturalness</h4>
-<table class="w3-small w3-table w3-striped w3-border">
+<table class="w3-small w3-table w3-striped w3-border w3-hoverable">
 <thead class="w3-black">
 <tr><th>#</th><th>TrueSkill</th><th>Range</th><th>Submitter</th><th>System name</th></tr>
 </thead>
@@ -466,7 +466,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr><td>-0.081</td><td>(13-16)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
 <tr class="w3-border-bottom"><td>-0.083</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_1</td></tr>
 <tr><td rowspan="2">4</td><td>-0.144</td><td>(17-18)</td><td>FORGe</td><td>E2E_UPF_1</td></tr>
-<tr class="w3-border-bottom"><td>-0.181</td><td>(17-18)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
+<tr class="w3-border-bottom"><td>-0.181</td><td>(17-18)</td><td>Henry Elder &amp; Sebastian Gehrmann</td><td>primary_submission-temperature_1.1</td></tr>
 <tr><td rowspan="2">5</td><td>-0.262</td><td>(19-20)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
 <tr><td>-0.263</td><td>(19-20)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
 </tbody>
