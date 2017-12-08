@@ -28,6 +28,9 @@ body, html {
 .w3-col.s4.m3.l2{
   width: 13%;
 }
+.late {
+    font-style: italic;
+}
 
 #main-title {
     font-size: 90px;
@@ -48,6 +51,7 @@ h4 {
     font-weight: bold;
 }
 </style>
+<script type="text/javascript" src="js/sorttable.js"></script>
 <body>
 
 <!-- Links (sit on top) -->
@@ -56,7 +60,7 @@ h4 {
     <div class="w3-col s4 m3 l1">
       <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
-    <div class="w3-col s4 m3 l2">
+    <div class="w3-col s4 m3 l1">
       <a href="#motiv" class="w3-button w3-block w3-black">MOTIVATION</a>
     </div>
     <div class="w3-col s4 m3 l1">
@@ -74,8 +78,11 @@ h4 {
     <div class="w3-col s4 m3 l2">
       <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
     </div>
-    <div class="w3-col s4 m3 l2">
+    <div class="w3-col s4 m3 l1">
       <a href="#submission" class="w3-button w3-block w3-black">SUBMISSION</a>
+    </div>
+    <div class="w3-col s4 m3 l1">
+      <a href="#results" class="w3-button w3-block w3-black">RESULTS</a>
     </div>
     <div class="w3-col s4 m3 l1">
       <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
@@ -310,75 +317,157 @@ We will, however, give you the chance to present your work as part of a special 
 
 <!-- Results -->
 
-<div class="w3-container" id="dates">
-  <div class="w3-content" style="max-width:700px">
+<div class="w3-container" id="results">
+  <div class="w3-content">
 <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
-Results
+Evaluation Results
 </span></h2>
+  <div class="w3-content" style="max-width:700px">
 
-<table>
-<thead>
-<tr><th>Submitter</th><th>Affiliation</th><th>System name</th><th>primary</th><th>BLEU</th><th>NIST</th><th>METEOR</th><th>ROUGE_L</th><th>CIDEr</th></tr>
+<h3>Automatic Metrics</h3>
+<p>
+The automatic evaluation results were obtained using the <a href="https://github.com/tuetschek/e2e-metrics">metrics scripts provided with the baseline</a>.
+The table is sortable – just click on the metric you want use for sorting. Click again to reverse the sort.
+</p>
+  </div>
+<table class="w3-small w3-table w3-striped w3-border sortable">
+<thead class="w3-black">
+<tr><th>Submitter</th><th>Affiliation</th><th>System name</th><th>P?</th><th>BLEU</th><th>NIST</th><th>METEOR</th><th>ROUGE_L</th><th>CIDEr</th></tr>
 </thead>
 <tbody>
-<tr><td>BASELINE</td><td>Heriot-Watt University</td><td>Baseline</td><td>yes</td><td>0.6593</td><td>8.6094</td><td>0.4483</td><td>0.6850</td><td>2.2338</td></tr>
-<tr><td>Biao Zhang</td><td>Xiamen University</td><td>bzhang_submit</td><td>yes</td><td>0.6545</td><td>8.1840</td><td>0.4392</td><td>0.7083</td><td>2.1012</td></tr>
+<tr><td>BASELINE</td><td>Heriot-Watt University</td><td>Baseline</td><td>✓</td><td>0.6593</td><td>8.6094</td><td>0.4483</td><td>0.6850</td><td>2.2338</td></tr>
+<tr><td>Biao Zhang</td><td>Xiamen University</td><td>bzhang_submit</td><td>✓</td><td>0.6545</td><td>8.1840</td><td>0.4392</td><td>0.7083</td><td>2.1012</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Abstract-beam1</td><td></td><td>0.5854</td><td>5.4691</td><td>0.3977</td><td>0.6747</td><td>1.6391</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Abstract-beam2</td><td></td><td>0.5916</td><td>5.9477</td><td>0.3974</td><td>0.6701</td><td>1.6513</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Abstract-beam3</td><td></td><td>0.6150</td><td>6.8029</td><td>0.4068</td><td>0.6750</td><td>1.7870</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Abstract-greedy</td><td></td><td>0.6635</td><td>8.3977</td><td>0.4312</td><td>0.6909</td><td>2.0788</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>NonAbstract-beam2</td><td></td><td>0.5860</td><td>6.1602</td><td>0.3833</td><td>0.6619</td><td>1.6133</td></tr>
 <tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>NonAbstract-beam3</td><td></td><td>0.6088</td><td>6.9790</td><td>0.3899</td><td>0.6628</td><td>1.7015</td></tr>
-<tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Primary_NonAbstract-beam1</td><td>yes</td><td>0.5859</td><td>5.4383</td><td>0.3836</td><td>0.6714</td><td>1.5790</td></tr>
+<tr><td>Chen Shuang</td><td>Harbin Institute of Technology</td><td>Primary_NonAbstract-beam1</td><td>✓</td><td>0.5859</td><td>5.4383</td><td>0.3836</td><td>0.6714</td><td>1.5790</td></tr>
 <tr><td>Deriu Jan Milan</td><td>Zürcher Hochschule für Angewandte Wissenschaften</td><td>ZHAW_base</td><td></td><td>0.6544</td><td>8.3391</td><td>0.4448</td><td>0.6783</td><td>2.1438</td></tr>
-<tr><td>Deriu Jan Milan</td><td>Zürcher Hochschule für Angewandte Wissenschaften</td><td>ZHAW_primary_1</td><td>yes</td><td>0.5864</td><td>8.0212</td><td>0.4322</td><td>0.5998</td><td>1.8173</td></tr>
-<tr><td>Deriu Jan Milan</td><td>Zürcher Hochschule für Angewandte Wissenschaften</td><td>ZHAW_primary_2</td><td>yes</td><td>0.6004</td><td>8.1394</td><td>0.4388</td><td>0.6119</td><td>1.9188</td></tr>
-<tr><td>FORGe</td><td>Pompeu Fabra University</td><td>E2E_UPF_1</td><td>yes</td><td>0.4207</td><td>6.5139</td><td>0.3685</td><td>0.5437</td><td>1.3106</td></tr>
+<tr><td>Deriu Jan Milan</td><td>Zürcher Hochschule für Angewandte Wissenschaften</td><td>ZHAW_primary_1</td><td>✓</td><td>0.5864</td><td>8.0212</td><td>0.4322</td><td>0.5998</td><td>1.8173</td></tr>
+<tr><td>Deriu Jan Milan</td><td>Zürcher Hochschule für Angewandte Wissenschaften</td><td>ZHAW_primary_2</td><td>✓</td><td>0.6004</td><td>8.1394</td><td>0.4388</td><td>0.6119</td><td>1.9188</td></tr>
+<tr><td>FORGe</td><td>Pompeu Fabra University</td><td>E2E_UPF_1</td><td>✓</td><td>0.4207</td><td>6.5139</td><td>0.3685</td><td>0.5437</td><td>1.3106</td></tr>
 <tr><td>FORGe</td><td>Pompeu Fabra University</td><td>E2E_UPF_2</td><td></td><td>0.4113</td><td>6.3293</td><td>0.3686</td><td>0.5593</td><td>1.2467</td></tr>
-<tr><td>FORGe</td><td>Pompeu Fabra University</td><td>E2E_UPF_3</td><td>yes</td><td>0.4599</td><td>7.1092</td><td>0.3858</td><td>0.5611</td><td>1.5586</td></tr>
-<tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem1_var1</td><td>yes</td><td>0.6015</td><td>8.3075</td><td>0.4405</td><td>0.6778</td><td>2.1775</td></tr>
+<tr><td>FORGe</td><td>Pompeu Fabra University</td><td>E2E_UPF_3</td><td>✓</td><td>0.4599</td><td>7.1092</td><td>0.3858</td><td>0.5611</td><td>1.5586</td></tr>
+<tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem1_var1</td><td>✓</td><td>0.6015</td><td>8.3075</td><td>0.4405</td><td>0.6778</td><td>2.1775</td></tr>
 <tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem1_var2</td><td></td><td>0.6233</td><td>8.1751</td><td>0.4378</td><td>0.6887</td><td>2.2840</td></tr>
 <tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem1_var3</td><td></td><td>0.5690</td><td>8.0382</td><td>0.4202</td><td>0.6348</td><td>2.0956</td></tr>
 <tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem1_var4</td><td></td><td>0.5799</td><td>7.9163</td><td>0.4310</td><td>0.6670</td><td>2.0691</td></tr>
-<tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem2_var1</td><td>yes</td><td>0.5436</td><td>5.7462</td><td>0.3561</td><td>0.6152</td><td>1.4130</td></tr>
+<tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem2_var1</td><td>✓</td><td>0.5436</td><td>5.7462</td><td>0.3561</td><td>0.6152</td><td>1.4130</td></tr>
 <tr><td>Gerasimos Lampouras</td><td>University of Sheffield</td><td>sheffield_primarySystem2_var2</td><td></td><td>0.5356</td><td>7.8373</td><td>0.3831</td><td>0.5513</td><td>1.5825</td></tr>
 <tr><td>HarvardNLP &amp; Henry Elder</td><td>Harvard SEAS &amp; Adapt</td><td>main_1_support_1</td><td></td><td>0.6581</td><td>8.5719</td><td>0.4409</td><td>0.6893</td><td>2.1065</td></tr>
 <tr><td>HarvardNLP &amp; Henry Elder</td><td>Harvard SEAS &amp; Adapt</td><td>main_1_support_2</td><td></td><td>0.6618</td><td>8.6025</td><td>0.4571</td><td>0.7038</td><td>2.3371</td></tr>
 <tr><td>HarvardNLP &amp; Henry Elder</td><td>Harvard SEAS &amp; Adapt</td><td>main_1_support_3</td><td></td><td>0.6737</td><td>8.6061</td><td>0.4523</td><td>0.7084</td><td>2.3056</td></tr>
-<tr><td>HarvardNLP &amp; Henry Elder</td><td>Harvard SEAS &amp; Adapt</td><td>Primary_main_1</td><td>yes</td><td>0.6496</td><td>8.5268</td><td>0.4386</td><td>0.6872</td><td>2.0850</td></tr>
-<tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>Primary_test_2</td><td>yes</td><td>0.6422</td><td>8.3453</td><td>0.4469</td><td>0.6645</td><td>2.2721</td></tr>
+<tr><td>HarvardNLP &amp; Henry Elder</td><td>Harvard SEAS &amp; Adapt</td><td>Primary_main_1</td><td>✓</td><td>0.6496</td><td>8.5268</td><td>0.4386</td><td>0.6872</td><td>2.0850</td></tr>
+<tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>Primary_test_2</td><td>✓</td><td>0.6422</td><td>8.3453</td><td>0.4469</td><td>0.6645</td><td>2.2721</td></tr>
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_1</td><td></td><td>0.6396</td><td>8.3111</td><td>0.4466</td><td>0.6620</td><td>2.2272</td></tr>
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_3</td><td></td><td>0.6395</td><td>8.3127</td><td>0.4457</td><td>0.6628</td><td>2.2442</td></tr>
 <tr><td>Heng Gong</td><td>Harbin Institute of Technology</td><td>test_4</td><td></td><td>0.6395</td><td>8.3127</td><td>0.4457</td><td>0.6628</td><td>2.2442</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>primary_submission_checkpoints-boole-n021-gpu_1-temperature_1.1</td><td>yes</td><td>0.5092</td><td>7.1954</td><td>0.4025</td><td>0.5872</td><td>1.5039</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission_checkpoints-boole-n021-gpu_1-temperature_0.9</td><td></td><td>0.5573</td><td>7.7013</td><td>0.4154</td><td>0.6130</td><td>1.8110</td></tr>
-<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission_checkpoints-boole-n021-gpu_1-temperature_1.0</td><td></td><td>0.5265</td><td>7.3991</td><td>0.4095</td><td>0.5992</td><td>1.6488</td></tr>
+<tr><td>Henry Elder</td><td>Adapt</td><td>primary_submission-temperature_1.1</td><td>✓</td><td>0.5092</td><td>7.1954</td><td>0.4025</td><td>0.5872</td><td>1.5039</td></tr>
+<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission-temperature_0.9</td><td></td><td>0.5573</td><td>7.7013</td><td>0.4154</td><td>0.6130</td><td>1.8110</td></tr>
+<tr><td>Henry Elder</td><td>Adapt</td><td>supporting_submission-temperature_1.0</td><td></td><td>0.5265</td><td>7.3991</td><td>0.4095</td><td>0.5992</td><td>1.6488</td></tr>
 <tr><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>&lt;anonymous&t;</td><td></td><td>0.2921</td><td>4.7690</td><td>0.2515</td><td>0.4361</td><td>0.6674</td></tr>
-<tr><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>yes</td><td>0.4723</td><td>6.1938</td><td>0.3170</td><td>0.5616</td><td>1.2127</td></tr>
-<tr><td>Shubham Agarwal</td><td>XRCE</td><td>submission_primary</td><td>yes</td><td>0.6534</td><td>8.5300</td><td>0.4435</td><td>0.6829</td><td>2.1539</td></tr>
+<tr><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>&lt;anonymous&gt;</td><td>✓</td><td>0.4723</td><td>6.1938</td><td>0.3170</td><td>0.5616</td><td>1.2127</td></tr>
+<tr><td>Shubham Agarwal</td><td>XRCE</td><td>submission_primary</td><td>✓</td><td>0.6534</td><td>8.5300</td><td>0.4435</td><td>0.6829</td><td>2.1539</td></tr>
 <tr><td>Shubham Agarwal</td><td>XRCE</td><td>submission_second</td><td></td><td>0.6669</td><td>8.5388</td><td>0.4484</td><td>0.6991</td><td>2.2239</td></tr>
 <tr><td>Shubham Agarwal</td><td>XRCE</td><td>submission_third</td><td></td><td>0.6676</td><td>8.5416</td><td>0.4485</td><td>0.6991</td><td>2.2276</td></tr>
-<tr><td>Slug2Slug</td><td>University of California Santa Cruz</td><td>slug2slug</td><td>yes</td><td>0.6619</td><td>8.6130</td><td>0.4454</td><td>0.6772</td><td>2.2615</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_1_Thomson_Reuters_test_output_model_11_post</td><td></td><td>0.6536</td><td>8.3293</td><td>0.4550</td><td>0.6805</td><td>2.1050</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_2_Thomson_Reuters_test_output_model_13_post</td><td></td><td>0.6562</td><td>8.3942</td><td>0.4571</td><td>0.6876</td><td>2.1706</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_3_Thomson_Reuters_test_output_beam_5_model_11_post</td><td></td><td>0.6805</td><td>8.7777</td><td>0.4462</td><td>0.6928</td><td>2.3195</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_4_Thomson_Reuters_test_output_beam_5_model_13_post</td><td></td><td>0.6742</td><td>8.6590</td><td>0.4499</td><td>0.6983</td><td>2.3018</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_5_Thomson_Reuters_submission_6</td><td></td><td>0.6208</td><td>8.0632</td><td>0.4417</td><td>0.6692</td><td>2.1127</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_6_Thomson_Reuters_submission_4_beam</td><td></td><td>0.6201</td><td>8.0938</td><td>0.4419</td><td>0.6740</td><td>2.1251</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_7_Thomson_Reuters_submission_4</td><td></td><td>0.6182</td><td>8.0616</td><td>0.4417</td><td>0.6729</td><td>2.0783</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_8_Thomson_Reuters_test_train_only</td><td></td><td>0.4111</td><td>6.7541</td><td>0.3970</td><td>0.5435</td><td>1.4096</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>Primary_1_Thomson_Reuters_submission_6_beam</td><td>yes</td><td>0.6336</td><td>8.1848</td><td>0.4322</td><td>0.6828</td><td>2.1425</td></tr>
-<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>Primary_2_Thomson_Reuters_test_train_dev</td><td>yes</td><td>0.4202</td><td>6.7686</td><td>0.3968</td><td>0.5481</td><td>1.4389</td></tr>
-<tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 1/Primary-Sys1</td><td>yes</td><td>0.6561</td><td>8.5105</td><td>0.4517</td><td>0.6839</td><td>2.2183</td></tr>
+<tr><td>Slug2Slug</td><td>University of California Santa Cruz</td><td>slug2slug</td><td>✓</td><td>0.6619</td><td>8.6130</td><td>0.4454</td><td>0.6772</td><td>2.2615</td></tr>
+<tr class="late"><td>Slug2Slug</td><td>University of California Santa Cruz</td><td>slug2slug_alt (late submission)</td><td>✓</td><td>0.6035</td><td>8.3954</td><td>0.4369</td><td>0.5991</td><td>2.1019</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_1_test_output_model_11_post</td><td></td><td>0.6536</td><td>8.3293</td><td>0.4550</td><td>0.6805</td><td>2.1050</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_2_test_output_model_13_post</td><td></td><td>0.6562</td><td>8.3942</td><td>0.4571</td><td>0.6876</td><td>2.1706</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_3_test_output_beam_5_model_11_post</td><td></td><td>0.6805</td><td>8.7777</td><td>0.4462</td><td>0.6928</td><td>2.3195</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_4_test_output_beam_5_model_13_post</td><td></td><td>0.6742</td><td>8.6590</td><td>0.4499</td><td>0.6983</td><td>2.3018</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_5_submission_6</td><td></td><td>0.6208</td><td>8.0632</td><td>0.4417</td><td>0.6692</td><td>2.1127</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_6_submission_4_beam</td><td></td><td>0.6201</td><td>8.0938</td><td>0.4419</td><td>0.6740</td><td>2.1251</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_7_submission_4</td><td></td><td>0.6182</td><td>8.0616</td><td>0.4417</td><td>0.6729</td><td>2.0783</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>NonPrimary_8_test_train_only</td><td></td><td>0.4111</td><td>6.7541</td><td>0.3970</td><td>0.5435</td><td>1.4096</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>Primary_1_submission_6_beam</td><td>✓</td><td>0.6336</td><td>8.1848</td><td>0.4322</td><td>0.6828</td><td>2.1425</td></tr>
+<tr><td>Thomson Reuters NLG</td><td>Thomson Reuters</td><td>Primary_2_test_train_dev</td><td>✓</td><td>0.4202</td><td>6.7686</td><td>0.3968</td><td>0.5481</td><td>1.4389</td></tr>
+<tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 1/Primary-Sys1</td><td>✓</td><td>0.6561</td><td>8.5105</td><td>0.4517</td><td>0.6839</td><td>2.2183</td></tr>
 <tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 1/Sys1-Model1</td><td></td><td>0.6476</td><td>8.4301</td><td>0.4508</td><td>0.6795</td><td>2.1233</td></tr>
-<tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 2/Primary-Sys2</td><td>yes</td><td>0.6502</td><td>8.5211</td><td>0.4396</td><td>0.6853</td><td>2.1670</td></tr>
+<tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 2/Primary-Sys2</td><td>✓</td><td>0.6502</td><td>8.5211</td><td>0.4396</td><td>0.6853</td><td>2.1670</td></tr>
 <tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 2/Sys2-Model1</td><td></td><td>0.6606</td><td>8.6223</td><td>0.4439</td><td>0.6772</td><td>2.1997</td></tr>
 <tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 2/Sys2-Model2</td><td></td><td>0.6563</td><td>8.5482</td><td>0.4482</td><td>0.6835</td><td>2.1953</td></tr>
 <tr><td>TNT-NLG</td><td>University of California Santa Cruz</td><td>System 2/Sys2-Model3</td><td></td><td>0.3681</td><td>6.6004</td><td>0.3846</td><td>0.5259</td><td>1.5205</td></tr>
-<tr><td>UIT-DANGNT</td><td>VNU-HCM University of Information Technology</td><td>test_e2e_result_2 final_TSV</td><td>yes</td><td>0.5990</td><td>7.9277</td><td>0.4346</td><td>0.6634</td><td>2.0783</td></tr>
+<tr><td>UIT-DANGNT</td><td>VNU-HCM University of Information Technology</td><td>test_e2e_result_2 final_TSV</td><td>✓</td><td>0.5990</td><td>7.9277</td><td>0.4346</td><td>0.6634</td><td>2.0783</td></tr>
+</tbody>
+</table>
+<span class="w3-small">Note: “P?” denotes primary submissions.</span>
+  <div class="w3-content" style="max-width:700px">
+<p>
+</p>
+<h3>Human Evaluation</h3>
+<p>
+The human evaluation was conducted on the 19 primary systems and the baseline using the CrowdFlower platform. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>naturalness</em> and <em>quality</em>.
+</p>
+<p>
+<em>Naturalness</em> is defined the extent to which the utterance could have been produced by a native speaker. When collecting naturalness ratings, system outputs were presented to crowd workers without the corresponding meaning representation.
+</p>
+<p>
+<em>Quality</em> is defined as an overall quality of the utterance, in terms of its grammatical correctness, fluency, adequacy and other important factors. When collecting quality ratings, system outputs were presented to crowd workers together with the corresponding meaning representation.
+</p>
+<p>
+The final evaluation results were produced using the TrueSkill algorithm (<a href="http://www.aclweb.org/anthology/W14-3301">Sakaguchi et al., 2014</a>). For naturalness, the algorithm performed 1890 pairwise comparisons per each system (37800 comparisons in total), for quality – 1260 comparisons per system (25200 comparisons in total). In results tables, systems are ordered by their inferred system TrueSkill scores, and clustered. Systems within a cluster are considered tied. The system clusters have been created using bootstrap resampling, with a p-level of p ≤ 0.05.
+</p>
+<h4>Naturalness</h4>
+<table class="w3-small w3-table w3-striped w3-border">
+<thead class="w3-black">
+<tr><th>#</th><th>TrueSkill</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
+</thead>
+<tbody>
+<tr class="w3-border-bottom"><td>1</td><td>0.231</td><td>(1-1)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem2_var1</td></tr>
+<tr><td rowspan="10">2</td><td>0.192</td><td>(2-3)</td><td>Slug2Slug</td><td>slug2slug</td></tr>
+<tr><td>0.160</td><td>(2-4)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
+<tr><td>0.130</td><td>(4-6)</td><td>HarvardNLP &amp; Henry Elder</td><td>Primary_main_1</td></tr>
+<tr><td>0.121</td><td>(4-6)</td><td>Shubham Agarwal</td><td>submission_primary</td></tr>
+<tr><td>0.103</td><td>(5-7)</td><td>BASELINE</td><td>Baseline</td></tr>
+<tr><td>0.081</td><td>(6-9)</td><td>UIT-DANGNT</td><td>test_e2e_result_2 final_TSV</td></tr>
+<tr><td>0.066</td><td>(7-9)</td><td>TNT-NLG</td><td>System 2/Primary-Sys2</td></tr>
+<tr><td>0.054</td><td>(7-11)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
+<tr><td>0.028</td><td>(9-11)</td><td>TNT-NLG</td><td>System 1/Primary-Sys1</td></tr>
+<tr class="w3-border-bottom"><td>0.024</td><td>(9-11)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
+<tr><td rowspan="5">3</td><td>-0.046</td><td>(12-15)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
+<tr><td>-0.051</td><td>(12-15)</td><td>Thomson Reuters NLG</td><td>Primary_1_submission_6_beam</td></tr>
+<tr><td>-0.078</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_2</td></tr>
+<tr><td>-0.081</td><td>(13-16)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
+<tr class="w3-border-bottom"><td>-0.083</td><td>(13-16)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_1</td></tr>
+<tr><td rowspan="2">4</td><td>-0.144</td><td>(17-18)</td><td>FORGe</td><td>E2E_UPF_1</td></tr>
+<tr class="w3-border-bottom"><td>-0.181</td><td>(17-18)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
+<tr><td rowspan="2">5</td><td>-0.262</td><td>(19-20)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
+<tr><td>-0.263</td><td>(19-20)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
 </tbody>
 </table>
 
+<h4>Quality</h4>
+<table class="w3-small w3-table w3-striped w3-border">
+<thead class="w3-black">
+<tr><th>#</th><th>Score</th><th>Range</th><th>System name</th><th>Submitter</th></tr>
+</thead>
+<tbody>
+<tr class="w3-border-bottom"><td>1</td><td>0.307</td><td>(1-1)</td><td>Slug2Slug</td><td>slug2slug</td></tr>
+<tr><td rowspan="14">2</td><td>0.228</td><td>(2-4)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
+<tr><td>0.209</td><td>(2-5)</td><td>BASELINE</td><td>Baseline</td></tr>
+<tr><td>0.201</td><td>(2-5)</td><td>UIT-DANGNT</td><td>test_e2e_result_2 final_TSV</td></tr>
+<tr><td>0.170</td><td>(3-6)</td><td>Slug2Slug</td><td>slug2slug_alt (late submission)</td></tr>
+<tr><td>0.145</td><td>(4-7)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_2</td></tr>
+<tr><td>0.102</td><td>(6-9)</td><td>TNT-NLG</td><td>System 1/Primary-Sys1</td></tr>
+<tr><td>0.079</td><td>(7-10)</td><td>TNT-NLG</td><td>System 2/Primary-Sys2</td></tr>
+<tr><td>0.052</td><td>(8-11)</td><td>Deriu Jan Milan</td><td>ZHAW_primary_1</td></tr>
+<tr><td>0.050</td><td>(8-11)</td><td>Shubham Agarwal</td><td>submission_primary</td></tr>
+<tr><td>0.035</td><td>(9-12)</td><td>FORGe</td><td>E2E_UPF_1</td></tr>
+<tr><td>-0.003</td><td>(11-13)</td><td>HarvardNLP &amp; Henry Elder</td><td>Primary_main_1</td></tr>
+<tr><td>-0.028</td><td>(12-14)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem1_var1</td></tr>
+<tr><td>-0.060</td><td>(13-15)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
+<tr class="w3-border-bottom"><td>-0.083</td><td>(13-15)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
+<tr><td rowspan="3">3</td><td>-0.146</td><td>(16-17)</td><td>Henry Elder</td><td>primary_submission-temperature_1.1</td></tr>
+<tr><td>-0.169</td><td>(16-18)</td><td>Thomson Reuters NLG</td><td>Primary_1_submission_6_beam</td></tr>
+<tr class="w3-border-bottom"><td>-0.191</td><td>(16-18)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
+<tr><td rowspan="2">4</td><td>-0.427</td><td>(19-20)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
+<tr><td>-0.470</td><td>(19-20)</td><td>Gerasimos Lampouras</td><td>sheffield_primarySystem2_var1</td></tr>
+</tbody>
+</table>
+  </div>
   </div>
 </div>
 
