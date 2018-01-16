@@ -396,15 +396,17 @@ The table is sortable – just click on the metric you want use for sorting. Cli
 <tr><td>&lt;anonymous 3&gt;</td><td>&lt;anonymous 3&gt;</td><td>System 2/Sys2-Model1</td><td></td><td>0.6606</td><td>8.6223</td><td>0.4439</td><td>0.6772</td><td>2.1997</td></tr>
 <tr><td>&lt;anonymous 3&gt;</td><td>&lt;anonymous 3&gt;</td><td>System 2/Sys2-Model2</td><td></td><td>0.6563</td><td>8.5482</td><td>0.4482</td><td>0.6835</td><td>2.1953</td></tr>
 <tr><td>&lt;anonymous 3&gt;</td><td>&lt;anonymous 3&gt;</td><td>System 2/Sys2-Model3</td><td></td><td>0.3681</td><td>6.6004</td><td>0.3846</td><td>0.5259</td><td>1.5205</td></tr>
-<tr><td>UIT-DANGNT</td><td>VNU-HCM University of Information Technology</td><td>test_e2e_result_2 final_TSV</td><td>✓</td><td>0.5990</td><td>7.9277</td><td>0.4346</td><td>0.6634</td><td>2.0783</td></tr>
+i<tr><td>UIT-DANGNT</td><td>VNU-HCM University of Information Technology</td><td>test_e2e_result_2 final_TSV</td><td>✓</td><td>0.5990</td><td>7.9277</td><td>0.4346</td><td>0.6634</td><td>2.0783</td></tr>
+<!-- added -->
 <tr><td>UKP-TUDA</td><td>Technische Universität Darmstadt</td><td>test_e2e-Puzikov</td><td>✓</td><td>0.5657</td><td>7.4544</td><td>0.4529</td><td>0.6614</td><td>1.8206</td></tr>
+<!-- /added -->
 </tbody>
 </table>
 <span class="w3-small">Note: “P?” denotes primary submissions.</span>
   <div class="w3-content" style="max-width:700px">
 <p>
 </p>
-<h3>Human Evaluation (Updated Results)</h3>
+<h3>Human Evaluation (updated results)</h3>
 <p>
 The human evaluation was conducted on the 20 primary systems and the baseline using the CrowdFlower platform. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>quality</em> and <em>naturalness</em>.
 </p>
@@ -427,6 +429,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr><th>#</th><th>TrueSkill</th><th>Range</th><th>Submitter</th><th>System name</th></tr>
 </thead>
 <tbody>
+<!-- old
 <tr class="w3-border-bottom"><td>1</td><td>0.307</td><td>(1-1)</td><td>&lt;anonymous 2&gt;</td><td>&lt;anonymous 2&gt;</td></tr>
 <tr><td class="mid-align" rowspan="14">2</td><td>0.228</td><td>(2-4)</td><td>Heng Gong</td><td>Primary_test_2</td></tr>
 <tr><td class="notfirst">0.209</td><td>(2-5)</td><td>BASELINE</td><td>Baseline</td></tr>
@@ -447,6 +450,28 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr class="w3-border-bottom"><td class="notfirst">-0.191</td><td>(16-18)</td><td>Biao Zhang</td><td>bzhang_submit</td></tr>
 <tr><td class="mid-align" rowspan="2">4</td><td>-0.427</td><td>(19-20)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
 <tr><td class="notfirst">-0.470</td><td>(19-20)</td><td>Sheffield NLP</td><td>sheffield_primarySystem2_var1</td></tr>
+     /old -->
+<tr class="w3-border-bottom"><td>1</td><td>0.300</td><td>(1.0, 1.0)</td><td>&lt;anonymous 2&gt;</td><td>&lt;anonymous 2&gt;</td></tr>
+<tr><td class="mid-align" rowspan="13">2</td><td>0.228</td><td>(2.0, 4.0)</td><td>ukp-tuda</td><td>UKP-TUDA</td></tr>
+<tr><td class="notfirst">0.213</td><td>(2.0, 5.0)</td><td>Primary_test_2</td><td>Heng Gong</td></tr>
+<tr><td class="notfirst">0.184</td><td>(3.0, 5.0)</td><td>test_e2e_result_2_final_TSV</td><td>UIT-DANGNT</td></tr>
+<tr><td class="notfirst">0.184</td><td>(3.0, 6.0)</td><td>Baseline</td><td>BASELINE</td></tr>
+<tr><td class="notfirst">0.136</td><td>(5.0, 7.0)</td><td>&lt;anonymous 2 alt&gt; (late submission)</td><td>&lt;anonymous 2&gt;</td></tr>
+<tr><td class="notfirst">0.117</td><td>(6.0, 8.0)</td><td>primary_2</td><td>&lt;anonymous 4&gt;</td></tr>
+<tr><td class="notfirst">0.084</td><td>(7.0, 10.0)</td><td>System 1/Primary-Sys1</td><td>&lt;anonymous 3&gt;</td></tr>
+<tr><td class="notfirst">0.065</td><td>(8.0, 10.0)</td><td>System 2/Primary-Sys2</td><td>&lt;anonymous 3&gt;</td></tr>
+<tr><td class="notfirst">0.048</td><td>(8.0, 12.0)</td><td>submission_primary</td><td>NLE</td></tr>
+<tr><td class="notfirst">0.018</td><td>(10.0, 13.0)</td><td>primary_1</td><td>&lt;anonymous 4&gt;</td></tr>
+<tr><td class="notfirst">0.014</td><td>(10.0, 14.0)</td><td>E2E_UPF_1</td><td>FORGe</td></tr>
+<tr><td class="notfirst">-0.012</td><td>(11.0, 14.0)</td><td>sheffield_primarySystem1_var1</td><td>Sheffield NLP</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">-0.012</td><td>(11.0, 14.0)</td><td>Primary_main_1</td><td>HarvardNLP &amp; Henry Elder</td></tr>
+<tr><td class="mid-align" rowspan="2">3</td><td>-0.078</td><td>(15.0, 16.0)</td><td>Primary_2_test_train_dev</td><td>Thomson Reuters NLG</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">-0.083</td><td>(15.0, 16.0)</td><td>E2E_UPF_3</td><td>FORGe</td></tr>
+<tr><td class="mid-align" rowspan="3">4</td><td>-0.152</td><td>(17.0, 19.0)</td><td>primary_submission-temperature_1.1</td><td>&lt;anonymous 5&gt;</td></tr>
+<tr><td class="notfirst">-0.185</td><td>(17.0, 19.0)</td><td>Primary_1_submission_6_beam</td><td>Thomson Reuters NLG</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">-0.186</td><td>(17.0, 19.0)</td><td>bzhang_submit</td><td>Biao Zhang</td></tr>
+<tr><td class="mid-align" rowspan="2">5</td><td>-0.426</td><td>(20.0, 21.0)</td><td>Primary_NonAbstract-beam1</td><td>Chen Shuang</td></tr>
+<tr><td class="notfirst">-0.457</td><td>(20.0, 21.0)</td><td>sheffield_primarySystem2_var1</td><td>Sheffield NLP</td></tr>
 </tbody>
 </table>
 
@@ -456,6 +481,7 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr><th>#</th><th>TrueSkill</th><th>Range</th><th>Submitter</th><th>System name</th></tr>
 </thead>
 <tbody>
+<!-- old
 <tr class="w3-border-bottom"><td>1</td><td>0.231</td><td>(1-1)</td><td>Sheffield NLP</td><td>sheffield_primarySystem2_var1</td></tr>
 <tr><td class="mid-align" rowspan="10">2</td><td>0.192</td><td>(2-3)</td><td>&lt;anonymous 2&gt;</td><td>&lt;anonymous 2&gt;</td></tr>
 <tr><td class="notfirst">0.160</td><td>(2-4)</td><td>Chen Shuang</td><td>Primary_NonAbstract-beam1</td></tr>
@@ -476,6 +502,28 @@ The final evaluation results were produced using the TrueSkill algorithm (<a hre
 <tr class="w3-border-bottom"><td class="notfirst">-0.181</td><td>(17-18)</td><td>&lt;anonymous 5&gt;</td><td>primary_submission-temperature_1.1</td></tr>
 <tr><td class="mid-align" rowspan="2">5</td><td>-0.262</td><td>(19-20)</td><td>FORGe</td><td>E2E_UPF_3</td></tr>
 <tr><td class="notfirst">-0.263</td><td>(19-20)</td><td>Thomson Reuters NLG</td><td>Primary_2_test_train_dev</td></tr>
+/old -->
+<tr class="w3-border-bottom"><td class="notfirst">1</td><td>0.211</td><td>(1.0, 1.0)</td><td>sheffield_primarySystem2_var1</td><td>Sheffield NLP</td></tr>
+<tr><td class="mid-align" rowspan="11">2</td><td>0.171</td><td>(2.0, 3.0)</td><td>&lt;anonymous 2&gt;</td><td>&lt;anonymous 2&gt;</td></tr>
+<tr><td class="notfirst">0.154</td><td>(2.0, 4.0)</td><td>Primary_NonAbstract-beam1</td><td>Chen Shuang</td></tr>
+<tr><td class="notfirst">0.126</td><td>(3.0, 6.0)</td><td>Primary_main_1</td><td>HarvardNLP &amp; Henry Elder</td></tr>
+<tr><td class="notfirst">0.105</td><td>(4.0, 8.0)</td><td>submission_primary</td><td>NLE</td></tr>
+<tr><td class="notfirst">0.101</td><td>(4.0, 8.0)</td><td>Baseline</td><td>BASELINE</td></tr>
+<tr><td class="notfirst">0.091</td><td>(5.0, 8.0)</td><td>test_e2e_result_2 final_TSV</td><td>UIT-DANGNT</td></tr>
+<tr><td class="notfirst">0.077</td><td>(5.0, 10.0)</td><td>ukp-tuda</td><td>UKP-TUDA</td></tr>
+<tr><td class="notfirst">0.060</td><td>(7.0, 11.0)</td><td>System 2/Primary-Sys2</td><td>&lt;anonymous 3&gt;</td></tr>
+<tr><td class="notfirst">0.046</td><td>(9.0, 12.0)</td><td>Primary_test_2</td><td>Heng Gong</td></tr>
+<tr><td class="notfirst">0.027</td><td>(9.0, 12.0)</td><td>System 1/Primary-Sys1</td><td>&lt;anonymous 3&gt;</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">0.027</td><td>(10.0, 12.0)</td><td>bzhang_submit</td><td>Biao Zhang</td></tr>
+<tr><td class="mid-align" rowspan="5">3</td><td>-0.053</td><td>(13.0, 16.0)</td><td>Primary_1_submission_6_beam</td><td>Thomson Reuters NLG</td></tr>
+<tr><td class="notfirst">-0.073</td><td>(13.0, 17.0)</td><td>&lt;anonymous 2 alt&gt; (late submission)</td><td>&lt;anonymous 2&gt;</td></tr>
+<tr><td class="notfirst">-0.077</td><td>(13.0, 17.0)</td><td>sheffield_primarySystem1_var1</td><td>Sheffield NLP</td></tr>
+<tr><td class="notfirst">-0.083</td><td>(13.0, 17.0)</td><td>primary_2</td><td>&lt;anonymous 4&gt;</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">-0.104</td><td>(15.0, 17.0)</td><td>primary_1</td><td>&lt;anonymous 4&gt;</td></tr>
+<tr><td class="mid-align" rowspan="2">4</td><td>-0.144</td><td>(18.0, 19.0)</td><td>E2E_UPF_1</td><td>FORGe</td></tr>
+<tr class="w3-border-bottom"><td class="notfirst">-0.164</td><td>(18.0, 19.0)</td><td>primary_submission-temperature_1.1</td><td>&lt;anonymous 5&gt;</td></tr>
+<tr><td class="mid-align" rowspan="2">5</td><td>-0.243</td><td>(20.0, 21.0)</td><td>Primary_2_test_train_dev</td><td>Thomson Reuters NLG</td></tr>
+<tr><td class="notfirst">-0.255</td><td>(20.0, 21.0)</td><td>E2E_UPF_3</td><td>FORGe</td></tr>
 </tbody>
 </table>
 
