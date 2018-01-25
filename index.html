@@ -57,7 +57,28 @@ h4 {
     font-weight: bold;
 }
 </style>
+
+<!-- Google Analytics + autotrack -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-113061228-1', 'auto');
+
+ga('require', 'eventTracker');
+ga('require', 'outboundLinkTracker');
+
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script async src="js/autotrack.js"></script>
+
+<!-- table sorting script -->
 <script type="text/javascript" src="js/sorttable.js"></script>
+
+<!-- 
+
+    body 
+
+-->
 <body>
 
 <!-- Links (sit on top) -->
@@ -69,12 +90,12 @@ h4 {
     <div class="w3-col s4 m3 l1">
       <a href="#motiv" class="w3-button w3-block w3-black">MOTIVATION</a>
     </div>
-    <div class="w3-col s4 m3 l1">
+    <div class="w3-col s4 m3 l2">
       <a href="#task" class="w3-button w3-block w3-black">TASK</a>
     </div>
-    <div class="w3-col s4 m3 l1">
+    <!--<div class="w3-col s4 m3 l2">
       <a href="#news" class="w3-button w3-block w3-black">NEWS</a>
-    </div>
+    </div>-->
     <div class="w3-col s4 m3 l2">
       <a href="#register" class="w3-button w3-block w3-black">DATA</a>
     </div>
@@ -84,9 +105,9 @@ h4 {
     <div class="w3-col s4 m3 l2">
       <a href="#dates" class="w3-button w3-block w3-black">DATES</a>
     </div>
-    <div class="w3-col s4 m3 l1">
+    <!--<div class="w3-col s4 m3 l1">
       <a href="#submission" class="w3-button w3-block w3-black">SUBMISSION</a>
-    </div>
+    </div>-->
     <div class="w3-col s4 m3 l1">
       <a href="#results" class="w3-button w3-block w3-black">RESULTS</a>
     </div>
@@ -155,8 +176,7 @@ near[Burger King]
 </div>
 
 <p>
-The full data set can be obtained by registering <a href="#register">below</a>. A sample of the data <a href="https://github.com/jeknov/INLG_16_submission">can be obtained here</a>.
-A detailed description of the data can be found in our upcoming SIGDIAL paper, which is available <a href="https://arxiv.org/abs/1706.09254">on arXiv</a>.
+The full data set can now be downloaded <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/e2e-dataset.zip">here</a>. A detailed description of the data can be found in our <a href="https://arxiv.org/abs/1706.09254">SIGDIAL 2017 paper</a>.
 </p>
 <p>
 This challenge follows on from previous successful shared tasks on generation, e.g. <a href="http://alt.qcri.org/semeval2017/task9/">SemEval’17 task 9</a> on text generation from AMR, and <a href="http://www.nltg.brighton.ac.uk/research/genchal11/">Generation Challenges 2008-11</a>.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
@@ -170,7 +190,7 @@ This challenge follows on from previous successful shared tasks on generation, e
 <div class="w3-container" id="task">
   <div class="w3-content" style="max-width:700px">
 <h2 class="w3-center w3-padding-48"><span class="w3-tag w3-padding-left w3-padding-right">
-Proposed Task
+The Task
 </span></h2>
 <p>
 The task is to generate an utterance from a given MR, which is a) similar to human generated reference texts, and b) highly rated by humans. Similarity will be assessed using standard metrics, such as BLEU and METEOR. Human ratings will be obtained using a mixture of crowd-sourcing and expert annotations. We will also test a suite of novel metrics to estimate the quality of a generated utterance.
@@ -181,7 +201,7 @@ The metrics used for automatic evaluation are available <a href="https://github.
   </div>
 </div>
 
-<!-- News -->
+<!-- News
 
 <div class="w3-container" id="news">
   <div class="w3-content" style="max-width:700px">
@@ -189,14 +209,9 @@ The metrics used for automatic evaluation are available <a href="https://github.
 News
 </span></h2>
 <h3>Task Submissions <span class="w3-medium">(Nov 3, 2017)</span></h3>
-<p>
-We are happy to announce that the interest in the E2E NLG shared task has by far outperformed our expectations.
-Heriot-Watt University has set out this challenge for the first time this year, and we received a total of 60 submissions by 16 institutions with about 1/3 of these submissions coming from industry.
-In comparison, the well established <a href="http://www.statmt.org/wmt17/index.html">Conference in Machine Translation WMT’17</a> (running since 2006) got 31 institutions submitting to a total of 8 tasks.
-</p>
 </div>
 </div>
-
+-->
 
 <!-- Register / download data -->
 
@@ -206,13 +221,8 @@ In comparison, the well established <a href="http://www.statmt.org/wmt17/index.h
 Download Training and Test Data
 </span></h2>
 <p>
-Please <a href="https://goo.gl/forms/fov1KOX0GdgOK4Np2">register here</a> to download the training and development data.
-</p>
-<p>
-The test set is available <a href="http://www.macs.hw.ac.uk/interactionlab/E2E/data/test.zip">here</a>.
-</p>
-<p>
-The description of the data is available <a href="http://www.macs.hw.ac.uk/InteractionLab/E2E/data/Readme.txt">here</a>.
+The full E2E dataset is now available for download <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/e2e-dataset.zip">here</a>. 
+The package includes a description of the data format.
 A paper with a detailed description of the dataset appeared on SIGDIAL 2017 and is also available <a href="https://arxiv.org/abs/1706.09254">on arXiv</a>.
 </p>
 <p>
@@ -222,7 +232,8 @@ To cite the dataset and/or challenge, use:
 @inproceedings{novikova2017e2e,
   title={The {E2E} Dataset: New Challenges for End-to-End Generation},
   author={Novikova, Jekaterina and Du{\v{s}}ek, Ondrej and Rieser, Verena},
-  booktitle={Proceedings of the 18th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+  booktitle={Proceedings of the 18th Annual Meeting 
+             of the Special Interest Group on Discourse and Dialogue},
   address={Saarbr\"ucken, Germany},
   year={2017},
   note={arXiv:1706.09254},
@@ -253,7 +264,7 @@ We used <a href="https://github.com/UFAL-DSG/tgen">TGen</a> (<a href="http://acl
 </table>
 </div>
 <p>
-The full baseline system outputs for the development set can be downloaded <a href="data/baseline-output.txt">here</a> (one instance per line).
+The full baseline system outputs can be downloaded here for both the <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/baseline-devel-output.tsv">development</a> and <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/baseline-test-output.tsv">test</a> sets (one instance per line).
 If you want to run the baseline yourself, basic instructions are provided in the <a href="https://github.com/UFAL-DSG/tgen/tree/master/e2e-challenge">TGen Github repository</a>.
 </p>
 <p>
@@ -276,14 +287,15 @@ Important Dates
 <dt> 27 June 2017:</dt><dd> The baseline system is released.</dd>
 <dt> 16 October 2017:</dt><dd> Test data is released (MRs only)</dd>
 <dt> 31 October 2017:</dt><dd> Entry submission deadline</dd>
-<dt> 15 Nov  2017:</dt><dd> Evaluation results are released</dd>
+<dt> 15 November 2017:</dt><dd> Evaluation results are released</dd>
 <dt> 15 December 2017:</dt><dd> Participants submit a paper describing their systems</dd>
-<dt> February 2018:</dt><dd> Results presented at workshop </dd>
+<dt> 1 March 2018:</dt><dd> Final versions of the description papers due</dd>
+<dt> Late 2018:</dt><dd> Results presented at INLG (TBA) </dd>
 </dl>
   </div>
 </div>
 
-<!-- Submission -->
+<!-- Submission
 
 <div class="w3-container" id="submission">
   <div class="w3-content" style="max-width:700px">
@@ -320,6 +332,7 @@ We will, however, give you the chance to present your work as part of a special 
 
   </div>
 </div>
+-->
 
 <!-- Results -->
 
@@ -329,6 +342,12 @@ We will, however, give you the chance to present your work as part of a special 
 Evaluation Results
 </span></h2>
   <div class="w3-content" style="max-width:700px">
+
+<p>
+We are happy to announce that the interest in the E2E NLG shared task has by far outperformed our expectations.
+Heriot-Watt University has set out this challenge for the first time this year, and we received a total of 60 submissions by 16 institutions with about 1/3 of these submissions coming from industry.
+In comparison, the well established <a href="http://www.statmt.org/wmt17/index.html">Conference in Machine Translation WMT’17</a> (running since 2006) got 31 institutions submitting to a total of 8 tasks.
+</p>
 
 <h3>Automatic Metrics</h3>
 <p>
