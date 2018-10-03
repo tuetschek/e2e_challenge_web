@@ -179,7 +179,7 @@ near[Burger King]
 </div>
 
 <p>
-The full data set can now be downloaded <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/e2e-dataset.zip">here</a>. A detailed description of the data can be found in our <a href="https://arxiv.org/abs/1706.09254">SIGDIAL 2017 paper</a>.
+The full data set can now be downloaded <a href="https://github.com/tuetschek/e2e-dataset/releases/download/v1.0.0/e2e-dataset.zip">here</a>. A detailed description of the data can be found in our <a href="https://arxiv.org/abs/1706.09254">SIGDIAL 2017 paper</a>. A brief summary of the E2E NLG Challenge results is now available in our <a href="https://arxiv.org/abs/1810.01170">INLG 2018 paper</a>.
 </p>
 <p>
 This challenge follows on from previous successful shared tasks on generation, e.g. <a href="http://alt.qcri.org/semeval2017/task9/">SemEval’17 task 9</a> on text generation from AMR, and <a href="http://www.nltg.brighton.ac.uk/research/genchal11/">Generation Challenges 2008-11</a>.  However, this is the first NLG task to concentrate on (1) generation from dialogue acts, (2) using semantically un-aligned data.
@@ -229,12 +229,12 @@ The package includes a description of the data format.
 A paper with a detailed description of the dataset appeared on SIGDIAL 2017 and is also available <a href="https://arxiv.org/abs/1706.09254">on arXiv</a>.
 </p>
 <p>
-To cite the dataset and/or challenge, use:
+To cite the dataset, use:
 </p>
 <pre>
 @inproceedings{novikova2017e2e,
   title={The {E2E} Dataset: New Challenges for End-to-End Generation},
-  author={Novikova, Jekaterina and Du{\v{s}}ek, Ondrej and Rieser, Verena},
+  author={Novikova, Jekaterina and Du{\v{s}}ek, Ond\v{r}ej and Rieser, Verena},
   booktitle={Proceedings of the 18th Annual Meeting 
              of the Special Interest Group on Discourse and Dialogue},
   address={Saarbr\"ucken, Germany},
@@ -243,6 +243,7 @@ To cite the dataset and/or challenge, use:
   url={https://arxiv.org/abs/1706.09254},
 }
 </pre>
+See the <a href="#papers">Proceedings</a> section below for citing the E2E NLG Challenge results.
   </div>
 </div>
 
@@ -293,7 +294,7 @@ Important Dates
 <dt> 15 November 2017:</dt><dd> Evaluation results are released</dd>
 <dt> 15 December 2017:</dt><dd> Participants submit a paper describing their systems</dd>
 <dt> 1 March 2018:</dt><dd> Final versions of the description papers due</dd>
-<dt> Late 2018:</dt><dd> Results presented at INLG (TBA) </dd>
+<dt> 7 November 2018:</dt><dd> Results presented at INLG </dd>
 </dl>
   </div>
 </div>
@@ -357,6 +358,10 @@ In comparison, the well established <a href="http://www.statmt.org/wmt17/index.h
   <img src="e2e-map.png" width="700" height="363"></a>
 <!--<iframe src="https://www.google.com/maps/d/embed?mid=1SHeZkhZESNIgrbcNQtKK2QG0LoqeOjjO" width="640" height="360"></iframe>-->
 </p>
+<p>
+A brief summary of the E2E NLG Challenge results is now available in our <a href="https://arxiv.org/abs/1810.01170">INLG 2018 paper</a>, a more detailed analysis is in preparation.
+</p>
+
 <h3>Automatic Metrics</h3>
 <p>
 The automatic evaluation results were obtained using the <a href="https://github.com/tuetschek/e2e-metrics">metrics scripts provided with the baseline</a>.
@@ -435,7 +440,7 @@ The table is sortable – just click on the metric you want use for sorting. Cli
 </p>
 <h3>Human Evaluation (updated results)</h3>
 <p>
-The human evaluation was conducted on the 20 primary systems and the baseline using the CrowdFlower platform. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>quality</em> and <em>naturalness</em>.
+The human evaluation was conducted on the 20 primary systems and the baseline using the CrowdFlower platform. We used our newly developed RankME method (<a href="https://arxiv.org/abs/1803.05928">Novikova et al., 2018</a>) to obtain the ratings. Crowd workers were presented with five randomly selected outputs of different systems corresponding to a single meaning representation, and were asked to rank these systems from the best to worst, ties permitted. A single human-authored reference was provided for comparison. We collected separate ranks for <em>quality</em> and <em>naturalness</em>.
 </p>
 <p>
 <em>Quality</em> is defined as an overall quality of the utterance, in terms of its grammatical correctness, fluency, adequacy and other important factors. When collecting quality ratings, system outputs were presented to crowd workers together with the corresponding meaning representation.
@@ -567,6 +572,21 @@ Proceedings (Full System Descriptions)
 </span></h2>
   <div class="w3-content" style="max-width:700px">
 <p>
+A brief <a href="https://arxiv.org/abs/1810.01170">description of the challenge results</a> will be published at INLG. To cite the challenge, use:
+</p>
+<pre>
+@inproceedings{dusek2018findings,
+  title={Findings of the {E2E} {NLG} {Challenge}},
+  author={Du{\v{s}}ek, Ond\v{r}ej and Novikova, Jekaterina and Rieser, Verena},
+  booktitle={Proceedings of the 11th International Conference 
+             on Natural Language Generation},
+  address={Tilburg, The Netherlands},
+  year={2018},
+  note={arXiv:1810.01170},
+  url={https://arxiv.org/abs/1810.01170},
+}
+</pre>
+<p>
 All submitters participating in human evaluation provided a description of their primary systems as a technical paper. The papers are linked below:
 </p>
 <table class="w3-table w3-striped w3-border w3-hoverable w3-small">
@@ -597,7 +617,9 @@ Diverse Natural Language</a></td></tr>
 <p>
 List of papers that use the E2E dataset but did not participate in the official E2E challenge:
 </p>
-<ul>
+<ul class="w3-small">
+    <li><a href="http://arxiv.org/abs/1809.03015">Reed et al. (INLG 2018)</a>: <em>Can Neural Generators for Dialogue Learn Sentence Planning and Discourse Structuring?</em></li>
+    <li><a href="http://arxiv.org/abs/1809.05288">Juraska & Walker (INLG 2018)</a>: <em>Characterizing Variation in Crowd-Sourced Data for Training Neural Language Generators to Produce Stylistically Varied Outputs</em></li>
     <li><a href="https://www.csie.ntu.edu.tw/~yvchen/doc/NAACL18_HNLG.pdf">Su et al. (NAACL 2018)</a>: <em>Natural Language Generation by Hierarchical Decoding with Linguistic Patterns</em></li>
     <li><a href="https://arxiv.org/abs/1804.07899">Freitag & Roy (arXiv:1804.07899)</a>: <em>Unsupervised Natural Language Generation with Denoising Autoencoders</em></li>
 </ul>
